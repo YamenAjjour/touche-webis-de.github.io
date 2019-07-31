@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} Temir">
+    <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
+    {%- for css in page.additional_css %}
+    <link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
+    {%- endfor %}
+</head>
+
+<body class="uk-offcanvas-content">
+    <script src="{{ '/commons/js/thirdparty/uikit/uikit.min.js' | relative_url }}"></script>
+    <script src="{{ '/commons/js/thirdparty/uikit/uikit-icons.min.js' | relative_url }}"></script>
+
+    <div id="offcanvas-nav" class="mobile-nav" data-uk-offcanvas="overlay: true; flip: true;">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+            <!-- Off-canvas mobile navigation -->
+            <nav class="uk-margin-large-top">
+                <ul class="uk-nav uk-nav-primary uk-nav-parent-icon" data-uk-nav>
+                    <!--<li class="{% if page.nav_active == 'leaderboard' %} uk-active{% endif %}">
+                        <a href="{{ '/leaderboard.html' | relative_url }}">Leaderboard</a>
+                    </li>-->
+                    <li class="nav-group-start{% if page.nav_active == 'tira-guide' %} uk-active{% endif %}">
+                        <a href="{{ '/tira-guide.html' | relative_url }}">TIRA Guide</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="uk-background-secondary global-nav" data-uk-sticky>
+        <nav class="uk-navbar-container uk-navbar-transparent uk-container uk-light" data-uk-navbar="mode: click">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li{% if page.nav_active == "index" %} class="uk-active" {% endif %}>
+                        <a href="{{ '/' | relative_url }}" id="group-logo">Touché @ CLEF Argument Retrieval</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- Mobile navigation toggle button -->
+            <div class="uk-navbar-right mobile-nav">
+                <button class="uk-button uk-navbar-item uk-light uk-button-large" type="button"
+                    data-uk-icon="icon: menu" data-uk-toggle="target: #offcanvas-nav"></button>
+            </div>
+
+            <!-- Desktop navigation -->
+            <div class="uk-navbar-right desktop-nav">
+                <ul class="uk-navbar-nav">
+                    <!--<li class="{% if page.nav_active == 'leaderboard' %} uk-active{% endif %}">
+                        <a href="{{ '/leaderboard.html' | relative_url }}">Leaderboard</a>
+                    </li>-->
+                    <li class="nav-group-start{% if page.nav_active == 'tira-guide' %} uk-active{% endif %}">
+                        <a href="{{ '/tira-guide.html' | relative_url }}">TIRA Guide</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div data-uk-height-viewport="expand: true">
+        {{ content }}
+    </div>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container ">
+
+            <h2>Lab Committee</h2>
+
+            <div data-uk-grid="" class="uk-grid uk-grid-match uk-grid-small thumbnail-card-grid">
+                <div class="uk-first-column">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://www.informatik.uni-halle.de/arbeitsgruppen/big_data_analytics/mitarbeiter/bondarenko/" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/img/bondarenko.png" alt="Alexander Bondarenko"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Alexander Bondarenko</div>
+                                <div class="uk-text-secondary uk-margin-top">Martin-Luther-Universität Halle-Wittenberg</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://www.informatik.uni-halle.de/arbeitsgruppen/big_data_analytics/mitarbeiter/hagen/" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/img/hagen.jpg" alt="Matthias Hagen"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Matthias Hagen</div>
+                                <div class="uk-text-secondary uk-margin-top">Martin-Luther-Universität Halle-Wittenberg</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://temir.org/people.html" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/img/potthast.jpg" alt="Martin Potthast"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Martin Potthast</div>
+                                <div class="uk-text-secondary uk-margin-top">Leipzig University</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://cs.uni-paderborn.de/css/" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/img/wachsmuth.jpg" alt="Henning Wachsmuth"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Henning Wachsmuth</div>
+                                <div class="uk-text-secondary uk-margin-top">Paderborn University</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="uk-grid-margin uk-first-column">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="http://weimar.webis.de/people#stein" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/img/stein.jpg" alt="Benno Stein"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Benno Stein</div>
+                                <div class="uk-text-secondary uk-margin-top">Bauhaus-Universität Weimar</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!--Organizations container-->
+            <div class="uk-container uk-padding">
+                <h2>Organizations</h2>
+                <div class="uk-grid-medium uk-text-left" uk-grid>
+                    <div>
+                        <a href="#" target="_blank" class="uk-link-reset uk-text-large ">
+                            <img src="/img/webis-logo-green.png" alt="">
+                            &nbsp;Webis
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" class="uk-link-reset">
+                            <img src="/img/mlu-logo-res.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" class="uk-link-reset">
+                            <img src="/img/unileipzig-logo-res.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" class="uk-link-reset">
+                            <img src="/img/logo-pu-res.png" alt="">
+                        </a>
+                    </div>
+                    <div style="padding-top: 12px;">
+                        <a href="#" target="_blank" class="uk-link-reset">
+                            <img src="/img/uni-weimar-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!--Organizations container-->
+
+        </div>
+
+    </div>
+    <script>
+        UIkit.util.ready(() => {
+            const nav = UIkit.util.$(".global-nav");
+            const navHeight = UIkit.util.height(nav);
+
+            // correct scroll offset due to fixed navigation after page load
+            let fixScrollHeight = () => {
+                if (location.hash === "" || !UIkit.util.$(location.hash)) {
+                    return;
+                }
+
+                const pos = document.documentElement.scrollTop;
+                const offset = UIkit.util.offset(UIkit.util.$(location.hash));
+
+                if (pos > navHeight * .8 && offset) {
+                    document.documentElement.scrollTop = offset.top - navHeight - 20;
+                }
+            };
+
+            window.addEventListener("hashchange", fixScrollHeight, false);
+            setTimeout(fixScrollHeight, 100);
+        });
+    </script>
+
+</body>
+
+</html>
