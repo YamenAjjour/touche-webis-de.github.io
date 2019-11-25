@@ -86,6 +86,50 @@ description: Touché @ CLEF Argument Retrieval
                                         style="text-decoration:underline" class="uk-text-bold">DUC
                                         guidelines</a>. -->
                 </p>
+                <h2 class="uk-lead">Submission of Runs</h2>
+                <p class="uk-text-left">
+                        We encourage participants to use <a href="https://www.tira.io/">TIRA</a> for their submissions to increase the replicability of the experiments. We provide a <a href="/tira-guide.html">dedicated tira tutorial for Touché</a> and are available to help in case of problems. You can also submit runs per e-mail. In both cases, we will review your submission promptly and provide feedback.
+                <p class="uk-text-left">
+                        Runs may be either automatic or manual runs. An automatic run is made without any manual influence. A manual run is anything that is not an automatic run. Please let us know which of your runs are manual. Automatic runs should use the title field of a topic as the query as given by a user to a search engine and ignore the narrative and description.
+                </p>
+                <p class="uk-text-left">
+                        The submission format for both tasks will follow the standard TREC run format:<br><br>
+                        <code>qid Q0 doc rank score tag</code><br><br>
+
+                        With:
+                        <ul>
+                                <li><code>qid</code>: The topic number.</li>
+                                <li><code>Q0</code>: Unused, should always be Q0.</li>
+                                <li>
+                                       <code>doc</code>: The document id returned by your system for the topic <code>qid</code>:
+                                       <ul>
+                                                <li><strong>For Task 1</strong>: Use the official args-me id.</li>
+                                                <li><strong>For Task 2</strong>: Use the official ClueWeb12 id.</li>
+                                       </ul>
+                                </li>
+                                <li><code>rank</code>: The rank the document is retrieved at.</li>
+                                <li><code>score</code>: The score (integer or floating point) that generated the ranking. The score must be in descending (non-increasing) order. It is important to handle tied scores. (trec_eval sorts documents by the score values and not your rank values.)</li>
+                                <li><code>tag</code>: A tag that identifies your group and the method you used to produce the run.</li>
+                        </ul>
+
+                                The fields should be spectated with a whitespace. The width of the columns in the format is not important, but it is important to include all columns and have some amount of white space between the columns.<br><br>
+
+                                An example run for task 1 is:<br>
+
+                                <code>1 Q0 10113b57-2019-04-18T17:05:08Z-00001-000 1 17.89 myGroupMyMethod</code><br>
+                                <code>1 Q0 100531be-2019-04-18T19:18:31Z-00000-000 2 16.43 myGroupMyMethod</code><br>
+                                <code>1 Q0 10006689-2019-04-18T18:27:51Z-00000-000 3 16.42 myGroupMyMethod</code><br>
+                                <code>1 Q0 10038e9c-2019-04-18T12:46:53Z-00003-000 4 16.40 myGroupMyMethod</code><br>
+                                <code>...</code><br><br>
+
+                                An example run for task 2 is:<br>
+
+                                <code>1 Q0 clueweb09-en0010-85-29836 1 17.89 myGroupMyMethod</code><br>
+                                <code>1 Q0 clueweb09-en0010-86-00457 2 16.43 myGroupMyMethod</code><br>
+                                <code>1 Q0 clueweb09-en0010-86-09202 3 16.42 myGroupMyMethod</code><br>
+                                <code>1 Q0 clueweb09-en0010-92-24300 4 16.40 myGroupMyMethod</code><br>
+                                <code>...</code><br>
+                </p>
                 <h2 id="index-program">Program</h2>
                         The workshop program will be announced closer to the conference.
 
