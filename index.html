@@ -33,38 +33,37 @@ description: Touché @ CLEF Argument Retrieval
                 <p>The timezone of all deadlines is <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth">Anywhere on Earth</a>.</p>
                 <h2 class="uk-lead">Data</h2>
                 <p class="uk-text-left">
-                        Argument topics for subtask (1) and comparative questions for subtask (2) will be send to each team via email upon completed registration.<br><br>
-                        Example topic for <strong>subtask (1):</strong><br><br>
-                        &#60;title&#62;<br>
-                            &nbsp;&nbsp;&nbsp;climate change real<br>
-                        &#60;/title&#62;<br>
-                        &#60;description&#62;<br>
-                            &nbsp;&nbsp;&nbsp;You read an opinion piece on how climate change is a hoax
+                        Argument topics for subtask (1) and comparative questions for subtask (2) will be send to each team via email upon completed registration and are available in TIRA. The topics will be provided as XML files.<br><br>
+                        Example topics for <strong>subtask (1):</strong><br><br>
+                        &#60;topics&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;number&#62;1&#60;/number&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;climate change real&#60;/title&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;description&#62;You read an opinion piece on how climate change is a hoax
                             and disagree. Now you are looking for arguments supporting
-                            the claim that climate change is in fact real.<br>
-                        &#60;/description&#62;<br>
-                        &#60;narrative&#62;<br>
-                            &nbsp;&nbsp;&nbsp;Relevant arguments will support the given stance that
-                            climate change is real or attack a hoax side's argument.<br>
-                        &#60;/narrative&#62;<br><br>
+                            the claim that climate change is in fact real.&#60;/description&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;narrative&#62;Relevant arguments will support the given stance that
+                            climate change is real or attack a hoax side's argument.&#60;/narrative&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
+                        &#60;/topics&#62;<br><br>
 
                         <strong>Document collections.</strong> To search for relevant arguments, you can use your own index based on the dataset <a href="https://webis.de/data/args-me.html">args-me</a> or for simplicity deploy an API of the search engine <a href="https://www.args.me/api-en.html">args.me</a>.<br><br>
 
-                        Example topic for <strong>subtask (2):</strong><br><br>
-                        &#60;title&#62;<br>
-                            &nbsp;&nbsp;&nbsp;What are advantages and disadvantages of PHP over Python
-                            and vice versa?<br>
-                        &#60;/title&#62;<br>
-                        &#60;description&#62;<br>
-                            &nbsp;&nbsp;&nbsp;The user is looking for differences and similarities of PHP
-                            and Python and wants to know about scenarios that favor one
-                            over the other.<br>  
-                        &#60;/description&#62;<br>
-                        &#60;narrative&#62;<br>
-                            &nbsp;&nbsp;&nbsp;Relevant documents may contain an overview of more than
-                            these two programming languages but must include both of
-                            them with an explicit comparison of these two.<br>
-                        &#60;/narrative&#62;<br><br>
+                        Example topics for <strong>subtask (2):</strong><br><br>
+                        &#60;topics&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;number&#62;1&#60;/number&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;What are advantages and disadvantages of PHP over Python and vice versa?&#60;/title&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;description&#62;The user is looking for differences and similarities of PHP and Python and wants to know about scenarios that favor one over the other.&#60;/description&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;narrative&#62;Relevant documents may contain an overview of more than these two programming languages but must include both of them with an explicit comparison of these two.&#60;/narrative&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
+                        &#60;/topics&#62;<br><br>
 
                 <strong>Document collections.</strong> To search for relevant documents, you can use your own index based on <a href="https://lemurproject.org/clueweb12/">ClueWeb12</a> or for simplicity deploy an API of the search engine <a href="https://www.chatnoir.eu/doc/">ChatNoir</a>. You will recieve credentials to access API upon completed registration.
                 </p>
