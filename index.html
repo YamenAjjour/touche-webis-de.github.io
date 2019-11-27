@@ -33,27 +33,21 @@ description: Touché @ CLEF Argument Retrieval
                 <p>The timezone of all deadlines is <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth">Anywhere on Earth</a>.</p>
                 <h2 class="uk-lead">Data</h2>
                 <p class="uk-text-left">
-                        Argument topics for subtask (1) and comparative questions for subtask (2) will be send to each team via email upon completed registration and are available in TIRA. The topics will be provided as XML files.<br><br>
+                        Argument topics for subtask (1) and comparative questions for subtask (2) will be send to each team via email upon completed registration. The topics will be provided as XML files.<br><br>
                         Example topics for <strong>subtask (1):</strong><br><br>
-                        &#60;topics&#62;<br>
                         &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;number&#62;1&#60;/number&#62;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;climate change real&#60;/title&#62;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Is climate change real?&#60;/title&#62;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;description&#62;You read an opinion piece on how climate change is a hoax
                             and disagree. Now you are looking for arguments supporting
                             the claim that climate change is in fact real.&#60;/description&#62;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;narrative&#62;Relevant arguments will support the given stance that
                             climate change is real or attack a hoax side's argument.&#60;/narrative&#62;<br>
-                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
-                        &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br>
-                        &#60;/topics&#62;<br><br>
+                        &nbsp;&nbsp;&nbsp;&#60;/topic&#62;<br><br>
 
                         <strong>Document collections.</strong> To search for relevant arguments, you can use your own index based on the dataset <a href="https://webis.de/data/args-me.html">args-me</a> or for simplicity deploy an API of the search engine <a href="https://www.args.me/api-en.html">args.me</a>.<br><br>
 
                         Example topics for <strong>subtask (2):</strong><br><br>
-                        &#60;topics&#62;<br>
                         &nbsp;&nbsp;&nbsp;&#60;topic&#62;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;number&#62;1&#60;/number&#62;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;What are advantages and disadvantages of PHP over Python and vice versa?&#60;/title&#62;<br>
@@ -87,12 +81,12 @@ description: Touché @ CLEF Argument Retrieval
                 </p>
                 <h2 class="uk-lead">Submission of Runs</h2>
                 <p class="uk-text-left">
-                        We encourage participants to use <a href="https://www.tira.io/">TIRA</a> for their submissions to increase the replicability of the experiments. We provide a <a href="/tira-guide.html">dedicated tira tutorial for Touché</a> and are available to help in case of problems. You can also submit runs per e-mail. In both cases, we will review your submission promptly and provide feedback.
+                        We encourage participants to use <a href="https://www.tira.io/">TIRA</a> for their submissions to increase replicability of the experiments. We provide a <a href="/tira-guide.html">dedicated tira tutorial for Touché</a> and are available to walk you through. You can also submit runs per email. In both cases, we will review your submission promptly and provide feedback.
                 <p class="uk-text-left">
-                        Runs may be either automatic or manual runs. An automatic run is made without any manual influence. A manual run is anything that is not an automatic run. Please let us know which of your runs are manual. Automatic runs should use the title field of a topic as the query as given by a user to a search engine and ignore the narrative and description.
+                        Runs may be either automatic or manual. An automatic run is made without any manual manipulation of the given topic titles. Your run is automatic if you do not use description and narrative for developing approaches. A manual run is anything that is not an automatic run. Please let us know which of your runs are manual upon submission.
                 </p>
                 <p class="uk-text-left">
-                        The submission format for both tasks will follow the standard TREC run format:<br><br>
+                        The submission format for both tasks will follow the standard TREC format:<br><br>
                         <code>qid Q0 doc rank score tag</code><br><br>
 
                         With:
@@ -118,7 +112,6 @@ description: Touché @ CLEF Argument Retrieval
                                 <code>1 Q0 10113b57-2019-04-18T17:05:08Z-00001-000 1 17.89 myGroupMyMethod</code><br>
                                 <code>1 Q0 100531be-2019-04-18T19:18:31Z-00000-000 2 16.43 myGroupMyMethod</code><br>
                                 <code>1 Q0 10006689-2019-04-18T18:27:51Z-00000-000 3 16.42 myGroupMyMethod</code><br>
-                                <code>1 Q0 10038e9c-2019-04-18T12:46:53Z-00003-000 4 16.40 myGroupMyMethod</code><br>
                                 <code>...</code><br><br>
 
                                 An example run for task 2 is:<br>
@@ -126,7 +119,6 @@ description: Touché @ CLEF Argument Retrieval
                                 <code>1 Q0 clueweb09-en0010-85-29836 1 17.89 myGroupMyMethod</code><br>
                                 <code>1 Q0 clueweb09-en0010-86-00457 2 16.43 myGroupMyMethod</code><br>
                                 <code>1 Q0 clueweb09-en0010-86-09202 3 16.42 myGroupMyMethod</code><br>
-                                <code>1 Q0 clueweb09-en0010-92-24300 4 16.40 myGroupMyMethod</code><br>
                                 <code>...</code><br>
                 </p>
                 <h2 id="index-program">Program</h2>
